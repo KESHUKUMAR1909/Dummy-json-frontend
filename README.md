@@ -1,12 +1,68 @@
-# React + Vite
+# CRM Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **CRM-like Dashboard application** built using **React.js**, **Redux Toolkit**, and **DummyJSON API**. It supports user authentication, product management, dynamic charting, and responsive layouts with component-based structure.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 **Login Functionality**
+  - Authenticates user using DummyJSON API (`https://dummyjson.com/auth/login`)
+  - Stores JWT token in Redux and `localStorage`
+  - Protects private routes (e.g., Dashboard)
 
-## Expanding the ESLint configuration
+- 📦 **Product Listing**
+  - Fetches products from DummyJSON (`https://dummyjson.com/products`)
+  - Displays initial 10 products, with a **"Show More"** button to load more
+  - Prevents duplicate products from being shown
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📊 **Analytics Dashboard**
+  - Integrated charting section for product stats
+  - Uses product prices to generate bar/pie charts
+  - Scrollable right panel for viewing content without affecting sidebar
+
+- 👤 **User Profile & Sidebar**
+  - Displays `username` on the sidebar from Redux store
+  - Fully responsive and scroll-independent layout
+  - Left sidebar fixed; right section scrolls independently
+
+- 🧭 **Navigation**
+  - Structured into `Login`, `Dashboard`, and `Products`
+  - Sidebar acts as persistent navigation
+
+## 📁 Project Structure
+
+src/
+├── components/
+│ ├── LeftComponent.jsx
+│ ├── ProductCard.jsx
+│ └── ChartComponent.jsx
+├── pages/
+│ ├── Login.jsx
+│ └── Dashboard.jsx
+├── redux/
+│ ├── store.js
+│ ├── slices/
+│ │ ├── authSlice.js
+│ │ └── productSlice.js
+│ └── thunks/
+│ ├── authThunks.js
+│ └── productThunks.js
+├── App.jsx
+├── index.js
+└── App.cs
+
+
+## 🧠 Technologies Used
+
+- **Frontend**: React.js, React Router
+- **State Management**: Redux Toolkit
+- **API**: [DummyJSON](https://dummyjson.com/)
+- **Charting**: Recharts
+- **CSS**: Flexbox, Responsive Layouts
+
+## 🛠 Setup & Run
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/KESHUKUMAR1909/Dummy-json-frontend
+
