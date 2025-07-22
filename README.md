@@ -57,7 +57,7 @@ src/
 - **State Management**: Redux Toolkit
 - **API**: [DummyJSON](https://dummyjson.com/)
 - **Charting**: Recharts
-- **CSS**: Flexbox, Responsive Layouts
+- **CSS**: Flexbox, Responsive Layouts For Desktop Only
 
 ## 🛠 Setup & Run
 
